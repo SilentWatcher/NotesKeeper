@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NotesKeeper</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="sidebar.css" />
+  <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    /> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+  <nav class="nav">
+    <div>My Notes</div>
+  </nav>
+  <div class="mainContainer">
+
+    <section class="section-left">
+      <input type="checkbox" id="check">
+      <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+      </label>
+      <div class="sidebar ">
+        <header>Saved Notes</header>
+        <div class="savedNotes">
+          <h3>Learning Dom</h3>
+          <p class="summery">&emsp;textarea goes here... </p>
+        </div>
+        <div class="savedNotes">
+          <h3>Day 1</h3>
+          <p class="summery">&emsp;textarea goes here.... </p>
+        </div>
+        <div class="savedNotes">
+          <h3>Day 1</h3>
+          <p class="summery">&emsp;textarea goes here.... </p>
+        </div>
+        <div class="savedNotes">
+          <h3>Day 1</h3>
+          <p class="summery">&emsp;textarea goes here.... </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- <div style="width: 1px; background-color: rgb(194, 179, 179); height: auto"></div> -->
+    <section class="section-right">
+      <div>
+        <button id="btn-add" class="addbutton">Add Note</button>
+      </div>
+      <div id="hide" style="display: none">
+        <div id="note-edit">
+          <input class="title" id="titleOfNote" type="text" placeholder="Enter Title" />
+          <textarea class="textarea" placeholder="Write here..." id="text"> </textarea>
+        </div>
+
+        <div class="font-edit">
+          <button onclick="Bold()" id="bold"     title="Bold"     class="upper"><i class="fa-solid fa-bold"></i></button>
+          <button onclick="Italic()" id="italic"   title="Italic"   class="upper"><i class="fa-solid fa-italic"></i></button>
+          <button onclick="Underline()" id="underline"title="Underline"class="upper"><i class="fa-solid fa-underline"></i></button>
+          <button onclick="" id="save"     title="Save"     class="upper"><i class="fa-solid fa-sd-card"></i></button>
+          <button onclick="Delete() " id="delete"   title="Delete"   class="upper"><i class="fa-solid fa-trash"></i></button>
+          <button onclick="ResetAll() " id="reset"   title="reset"   class="upper"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="footer">
+    <p>&copy; Team Batman | 2022 | all rights reserved.</p>
+  </footer>
+
+  <script type="text/javascript" src="notes.js"></script>
+</body>
+
+</html>

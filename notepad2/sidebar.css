@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+.sidebar {
+  height: 100%;
+  width: 15.625rem;
+  border: 2px solid green;
+  color: white;
+  position: fixed;
+  left: -250px;
+  background: palegoldenrod;
+  transition: all 0.5s ease;
+  
+}
+.sidebar header {
+  font-size: 1.375rem;
+  padding: 22px;
+  color: black;
+  background: #86efac;
+  text-align: center;
+  line-height: 20px;
+  transition: all 0.5s ease;
+}
+
+.savedNotes {
+  height: 4rem;
+  width: 100%;
+  color: black;
+  display: block;
+  padding: 0.5rem 0 0 0.5rem;
+  border-top: 1px solid rgba(255, 166, 0, 0.507);
+  border-bottom: 1px solid rgba(216, 198, 119, 0.849);
+  transition: all 0.4s ease-out;
+}
+.savedNotes:hover {
+  background: rgba(255, 166, 0, 0.507);
+  padding-left: 1.5rem;
+  cursor: pointer;
+}
+
+#check {
+  display: none;
+}
+label #btn,
+label #cancel {
+  position: absolute;
+  cursor: pointer;
+  background: #86efac;
+  /* background: ; */
+  border-radius: 5px;
+  border: 1px solid rgba(255, 166, 0, 0.507);
+}
+label #btn {
+  left: 6px;
+  top: 55px;
+  font-size: 31px;
+  color: white;
+  padding: 3px 8px;
+  transition: all 0.5s;
+}
+
+label #cancel {
+  z-index: 1111;
+  left: -195px;
+  top: 72px;
+  font-size: 20px;
+  padding: 3px 9px;
+  color: white;
+  padding: 3px 8px;
+  transition: all 0.5s ease;
+}
+#check:checked ~ .sidebar {
+  left: 0;
+}
+
+#check:checked ~ label #btn {
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancel {
+  left: 250px;
+  left: 195px;
+  z-index: 1111;
+}
+
+
